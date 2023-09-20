@@ -2,14 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Eudoxus Sans", sans-serif;
   scroll-behavior: smooth;
+}
+
+.mesh-gradient {
+  background-color:hsla(0,0%,0%,1);
+background-image:
+radial-gradient(at 46% 100%, hsla(244,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 40% 50%, hsla(289,20%,44%,1) 0px, transparent 50%),
+radial-gradient(at 61% 50%, hsla(327,55%,50%,1) 0px, transparent 50%);
 }
 
 .gradient-01 {

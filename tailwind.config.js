@@ -16,19 +16,6 @@ module.exports = {
   
   theme: {
     extend: {
-      keyframes: {
-        animatedgradient: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
-        },
-      },
-      backgroundSize: {
-        '300%': '300%',
-      },
-      animation: {
-        gradient: 'animatedgradient 6s ease infinite alternate',
-      },
       colors: {
         'primary-dark': '#0f0f0f',
         'primary-white': '#666464',
@@ -59,10 +46,9 @@ module.exports = {
         dark: {
           colors: {
             primary: {
-              DEFAULT: "#02eb4b",
+              DEFAULT: "#fff",
               foreground: "#0000",
             },
-            focus: "#02eb4b",
           },
         },
       },

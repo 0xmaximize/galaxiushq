@@ -2,14 +2,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
-import Spline from '@splinetool/react-spline';
 
-function DaoComponent() {
+function Newsletter() {
   return(
-    <div>
-     
+    <div className='h-screen flex justify-center items-center'>
+     <p>
+        Newsletter
+     </p>
     </div>
 );
 }
 
-export default DaoComponent;
+export default Newsletter;

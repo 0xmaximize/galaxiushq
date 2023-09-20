@@ -1,10 +1,13 @@
 import Hero from './Hero';
-import SwapComponent from './Swap';
+import About from './About'
 import DaoComponent from './DAO';
-import QuestComponent from './Quest';
+import Insight from './Insight';
+import Newsletter from './Newsletter';
+
 export {
   Hero,
-  SwapComponent,
-  QuestComponent,
+  About,
   DaoComponent,
+  Insight,
+  Newsletter
 };

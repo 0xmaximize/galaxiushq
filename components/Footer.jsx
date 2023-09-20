@@ -1,116 +1,92 @@
 'use client'
 import React from "react";
+import styles from "../styles";
 import { FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
 import { SiGitbook } from 'react-icons/si';
 import { Divider } from "@nextui-org/react";
+import { exploreLinks, usageLinks, learnLinks } from "../constants";
 import Link from "next/link";
 
 function Footer() {
 	return (
 		<>
-			<div className="bg-black h-1/2 w-full flex md:flex-row flex-col justify-around items-start">
-				<div className="p-5 ">
-					<ul>
-						<p className="text-white font-bold pb-4 text-2xl">
-							Dappln - Web3.0 Portal
-						</p>
-						<div className="flex gap-6 pb-5">
-              <Link href='https://discord.com' target='_blank'>
-							<FaDiscord className="text-2xl cursor-pointer hover:text-green-500" />
-              </Link>
-              <Link href='https://twitter.com/dappln' target='_blank'>
-							<FaTwitter className="text-2xl cursor-pointer hover:text-green-500" />
-              </Link>
-              <Link href='https://github.com/dappln' target='_blank'>
-							<FaGithub className="text-2xl cursor-pointer hover:text-green-500" />
-              </Link>
-              <Link href='https://gitbook.com/dappln' target='_blank'>
-							<SiGitbook className="text-2xl cursor-pointer hover:text-green-500" />
-              </Link>
-						</div>
-					</ul>
-				</div>
-				<div className="p-5">
-					<ul>
-						<p className="text-white font-bold text-lg pb-4">General</p>
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							About
-						</li>
+			<footer className={`${styles.footer} md:mx-20`}>
+			<Divider className="my-10" />
+			<div className="md:flex justify-around items-start md:px-10">
+			<ul className=''>
+				<span className='font-bold mb-2'>Learn</span>
+				{learnLinks.map((data) => (
+					<li className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
+					))}
+				</ul>
+				<ul className=''>
+				<span className='font-bold'>Explore</span>
+				{exploreLinks.map((data) => (
+					<li className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
+					))}
+				</ul>
+				<ul className=''>
+				<span className='font-bold mb-2'>Build</span>
+				{usageLinks.map((data) => (
+					<li className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
+					))}
+				</ul>
+				<ul className=''>
+				<span className='font-bold mb-2'>Usage</span>
+				{usageLinks.map((data) => (
+					<li className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
+					))}
+				</ul>
 					
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Trade
-						</li>
-            	<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Quest
-						</li>
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							DPT Token
-						</li>
-            <li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Staking
-						</li>
-            <li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							DAO
-						</li>
-					</ul>
-				</div>
-        <div className="p-5">
-					<ul>
-						<p className="text-white font-bold text-lg pb-4">Resources</p>
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Docs
-						</li>
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Whitepaper v.1
-						</li>
-            <li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Github
-						</li>
-					</ul>
-				</div>
-				<div className="p-5">
-					<ul>
-          <p className="text-white font-bold text-lg pb-4">Community</p>
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Community Home
-						</li>
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Genesis
-						</li>
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Events
-						</li>
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Governance
-						</li>
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Press & Media
-						</li>
-					</ul>
-				</div>
-				<div className="p-5">
-					<ul>
-          <p className="text-white font-bold text-lg pb-4">Legal</p>
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Legal Terms
-						</li>
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Terms of use
-						</li>
-						<li className="text-white/50 text-[16px] pb-2 hover:text-white cursor-pointer">
-							Privacy Policy
-						</li>
-					
-					</ul>
-				</div>
+				<ul className='grid gap-2'>
+				<span className='font-bold'>Resources</span>
+				{exploreLinks.map((data) => (
+					<li className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
+					))}
+				</ul>
 			</div>
-      <Divider className="my-1 bg-white/5" /> 
 
-			<div className="flex flex-col justify-center items-center text-center p-2 bg-black">
-				<p className="text-[12px] text-white/50 font-normal">
-					©2023 dappln | all rights reserved
-				</p>
+			<div className='flex'>
+			<Divider className="my-1" />
 			</div>
+			<div className=''>
+			<div className="md:flex justify-between items-center">
+				<div className='flex my-4'>
+					<p className='font-bold text-[20px]'>
+					Galaxius - The blockchain gamification 
+					</p>
+				</div>
+				
+				<div className='flex gap-4 my-4 md:my-0'>
+					<FaDiscord />
+					<Divider className='h-4' orientation="vertical" />
+					<FaTwitter />
+					<Divider className='h-4' orientation="vertical" />
+					<FaGithub />
+					<Divider className='h-4' orientation="vertical" />
+					<SiGitbook />
+				</div>
+			</div>
+			
+			<p className='hidden md:block text-[12px] text-gray-500 '>
+			This website is maintained by the Galaxius Foundation on behalf of the decentralized community. The contents and opinions of this website do not necessarily reflect those of the galaxius foundation. This website links to projects, dApps and cryptocurrency exchanges as a service to the public. The Galaxius does not warrant that the information provided by these websites is correct, complete, and up-to-date. The Galaxius Foundation is not responsible for the content of those websites and expressly rejects any liability for damages of any kind resulting from the use, reference to, or reliance on any information contained within these websites. If you spot an error or issue on this website, please email marketing@galaxius.xyz
+			</p>
+			<div className="flex justify-start items-center">
+			<p className=' my-4 text-gray-400 text-[10px]'>
+					©2023 Galaxius Foundation  		
+				</p>
+			<Divider className='h-4' orientation="vertical" />
+			<p className='my-4 text-gray-400 hover:text-white text-[10px]'>
+				Privacy 	
+			</p>
+			<Divider className='h-4' orientation="vertical" />
+			<p className='px-2 my-4 text-gray-400 hover:text-white text-[10px]'>
+				Terms 	
+			</p>
+			</div>
+			</div>
+			</footer>
+	
 		</>
 	);
 }

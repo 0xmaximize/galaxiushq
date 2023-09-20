@@ -1,27 +1,14 @@
-import Navbars from './Navbars';
-import NavbarQuest from './NavbarQuest'
-import ConnectedCard from './ConnectedCard'
-import NotConnectedCard from './NotConnectedCard'
-import { TypingText, TitleText, abbreviateAddress, generateRandomText } from './CustomTexts';
-import { TwitterInput } from './TwitterInput';
+import Navbar from './Navbar'
+import { TypingText, TitleText, generateRandomText } from './CustomTexts';
 import Footer from './Footer';
-import { TwitterIcon } from './TwitterIcon';
-import { discordValue } from './discordValue';
-import { RandomIdenticon } from './RandomIdenticon';
-import ModalButton from './ModalButton';
+import Loader from './Loader/Loader'
+import Counter from './Counter';
 export {
-  NotConnectedCard,
-  Navbars,
-  ModalButton,
-  abbreviateAddress,
-  discordValue,
-  ConnectedCard,
-  NavbarQuest,
+  Navbar,
   TitleText,
-  RandomIdenticon,
   generateRandomText,
   TypingText,
-  TwitterInput,
-  TwitterIcon,
+  Loader,
   Footer,
+  Counter,
 };

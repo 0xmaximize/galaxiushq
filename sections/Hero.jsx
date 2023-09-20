@@ -1,48 +1,76 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import styles from '../styles';
-import { Card, CardBody, CardFooter, Button, Chip, Divider, Spinner, Select, SelectItem, Avatar } from '@nextui-org/react'
-import { AiFillSetting, AiOutlineSwap } from 'react-icons/ai';
-import { BsFillArrowRightCircleFill } from 'react-icons/bs';
+import EncryptButtons from '../components/EncryptButton';
+import Typewriter from 'typewriter-effect';
+import Spline from '@splinetool/react-spline';
+import { fadeIn } from '../utils/motion';
+import { HomeIcon, ScanIcon } from '../components/Icon';
+import { SiExpo } from 'react-icons/si'
+const icons = {
+  home:  <HomeIcon size={22}/>,
+  scan:  <ScanIcon size={22}/>
+
+};
+
+const buttonText1 = () => "Launch Portal";
+const buttonText2 = () => "Enter Galaverse";
 
 function Hero() {
 
   return(
-  <section className={`${styles.paddings}`}>
-    <div className={`${styles.yPaddings}`}>
-      <div className='justify-center items-center md:max-w-[720px]'>
-        <div className='flex justify-center items center'>
-          <Link href='/quest'>
-          <Chip
-          endContent={<BsFillArrowRightCircleFill size={18} />}
-          variant="flat"
-          color="primary"
-          className='hover:shadow-md shadow-md hover:text-green-500 shadow-green-600 hover:shadow-green-500'
-          >
-            Genesis Quest now is available
-        </Chip>
-        </Link>
-        </div>
-        <div className='text-center justify-center leading-[40px] md:leading-[74px] items-center'>
-        
-        <h2 className='text-[32px] px-4 md:text-[64px] mt-6 font-extrabold'>
-        Integrated Web3.0 Space by community.
-        </h2>
-          <h2 className='md:text-[18px] text-white/50 text-[16px] px-4 my-6 md:my-0 font-normal'>
-          web3.0 access | autonomous-organization | community-based        
-          </h2>
-        </div>
-        <div className='flex justify-center items-center mt-10'>
-          <Link href='/swap'>
-            <Button size='lg' style={{borderRadius:'40px'}} className='neon text-[20px] w-[260px] bg-transparent'>Get Started</Button>
-          </Link>
+    <section className={`bg-gradient-to-t from-black to-white/5 `}>
+      <div className={`justify-center items-center px-10 md:px-4 md:pt-12 lg:mx-16`}>
+        <div className='md:flex md:my-10 py-10 md:justify-around md:items-start md:flex-1 '>
+          <div className='grid grid-cols-1'>
+            <span 
+            className="text-[32px] md:text-[30px] lg:text-[52px] text-start  
+            font-bold md:font-extrabold text-blue-50">
+             An blockchain portal 
+            </span>
+            <span className="text-[28px] md:text-[30px] lg:text-[52px] text-start 
+            font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-blue-300 to-emerald-600">
+              <Typewriter 
+                options={{
+                autoStart: true,
+                loop: true,
+                delay: 40,
+                strings:
+                [
+                  "Exploring a universe",
+                  "Find an experience ",
+                  "The future of gaming",
+                  "Enter the Galaverse",
+                ]
+              }}
+              />
+            </span>
+              <motion.p className='text-[16px] my-4 md:max-w-[300px] lg:max-w-[600px] font-mono text-white/50'>
+                Galaxius is an an operable blockchain providing the database, oracle network and Gaming-platform.
+              </motion.p>
+              <div className='flex gap-4  md:gap-4 my-10'>
+              <div className='md:w-[200px] hidden md:flex'>
+             <EncryptButtons getTargetText={buttonText1} icons={icons.home}/>
+             </div>
+             <div className='md:max-w-[300px] '>
+             <EncryptButtons getTargetText={buttonText2} icons={icons.scan} />
+             </div>
+             </div>
+          
           </div>
-     </div>
-    </div>
+          <motion.div 
+             className='hidden lg:flex w-[500px] h-[500px]'
+             initial="hidden"
+             whileInView="show"
+             variants={fadeIn('center', 'tween', 0.5, 1)}
+             > 
+              <Spline scene="https://prod.spline.design/7E6tYNHzojhg7Ng6/scene.splinecode" />
+            </motion.div>
+        </div>  
+      </div>
     </section>
-);
+  );
 }
 
 export default Hero;
