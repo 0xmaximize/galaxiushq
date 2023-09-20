@@ -5,7 +5,6 @@ import { FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
 import { SiGitbook } from 'react-icons/si';
 import { Divider } from "@nextui-org/react";
 import { exploreLinks, usageLinks, learnLinks } from "../constants";
-import Link from "next/link";
 
 function Footer() {
 	return (
@@ -13,33 +12,33 @@ function Footer() {
 			<footer className={`${styles.footer} md:mx-20`}>
 			<Divider className="my-10" />
 			<div className="md:flex justify-around items-start md:px-10">
-			<ul className=''>
+			<ul label='learn'>
 				<span className='font-bold mb-2'>Learn</span>
 				{learnLinks.map((data) => (
-					<li className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
+					<li key='learn' className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
 					))}
 				</ul>
-				<ul className=''>
-				<span className='font-bold'>Explore</span>
+				<ul label='explore'>
+				<span key='explore'  className='font-bold'>Explore</span>
 				{exploreLinks.map((data) => (
-					<li className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
+					<li  key='learn' className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
 					))}
 				</ul>
-				<ul className=''>
-				<span className='font-bold mb-2'>Build</span>
+				<ul label='build'>
+				<span key='build' className='font-bold mb-2'>Build</span>
 				{usageLinks.map((data) => (
 					<li className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
 					))}
 				</ul>
-				<ul className=''>
-				<span className='font-bold mb-2'>Usage</span>
+				<ul label='usage'>
+				<span key='usage' className='font-bold mb-2'>Usage</span>
 				{usageLinks.map((data) => (
 					<li className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
 					))}
 				</ul>
 					
-				<ul className='grid gap-2'>
-				<span className='font-bold'>Resources</span>
+				<ul label='resources' className='grid gap-2'>
+				<span key="resources" className='font-bold'>Resources</span>
 				{exploreLinks.map((data) => (
 					<li className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
 					))}

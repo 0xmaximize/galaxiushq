@@ -123,6 +123,7 @@ export const cardsLinks = [
 
 export const exploreLinks = [
   {
+    
     title: "About",
     to:"/"
   },
