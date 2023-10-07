@@ -45,7 +45,7 @@ export default function Navbar() {
         </div>
         <ul className="hidden lg:gap-8 gap-4 md:flex justify-center items-center">
           <Link href='/' > 
-            <li className="text-[14px] text-white hover:text-white/70">About</li>
+            <li className=" text-[14px] text-white hover:text-white/70">About</li>
           </Link>
             <li>
               <Dropdown className='dark'>
@@ -56,7 +56,7 @@ export default function Navbar() {
                     endContent={icons.chevron}
                     radius="sm"
                   >
-                  <p className=" text-[14px]">Technology</p>
+                  <p className="lg:text-[14px]">Technology</p>
                   </Button>
                 </DropdownTrigger>    
                 <DropdownMenu
