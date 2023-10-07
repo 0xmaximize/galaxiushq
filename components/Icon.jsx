@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export const HomeIcon = ({size, height}) => {
   return (
@@ -15,6 +16,55 @@ export const HomeIcon = ({size, height}) => {
     </svg>
   );
 };
+
+export const ArrowTopRight = ({size, height}) => {
+  return(
+    <motion.svg
+      viewBox="0 0 20 20"
+      version="1.1"
+      height={size || height || 14}
+      size={size || height || 14}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor">
+      <g id="SVGRepo_bgCarrier" stroke-width="0" />
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+      <g id="SVGRepo_iconCarrier">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Dribbble-Light-Preview" transform="translate(-220.000000, -6599.000000)" fill="currentColor"> 
+            <g id="icons" transform="translate(56.000000, 160.000000)"> 
+            <path d="M182.009365,6439 L170.877817,6439 C170.338646,6439 169.995536,6439.44285 169.995536,6439.98167 L169.995536,6440.00967 C169.995536,6440.55948 170.326642,6440.99934 170.876817,6440.99934 L179.428543,6440.99934 C179.874685,6440.99934 180.096756,6441.54316 179.781655,6441.85705 L164.289717,6457.31393 C163.903594,6457.69881 163.903594,6458.3256 164.288717,6458.71047 L164.288717,6458.71147 C164.67484,6459.09634 165.30004,6459.09634 165.684162,6458.71047 L181.150092,6443.2156 C181.465192,6442.90071 181.999362,6443.12363 181.999362,6443.56849 L181.999362,6452.02069 C181.999362,6452.56451 182.450506,6452.99536 182.99568,6452.99536 L183.023689,6452.99536 C183.568863,6452.99536 184,6452.56451 184,6452.02069 L184,6441.01033 C184,6439.9057 183.114718,6439 182.009365,6439" id="arrow_right_up-[#358]" /> 
+            </g> 
+          </g> 
+        </g> 
+        </g>
+    </motion.svg>
+  )
+}
+
+export const Circle = ({size, height}) => {
+  return(
+    
+<svg 
+  viewBox="0 -0.5 21 21" 
+  height={size || height || 22}
+  size={size || height || 22}
+  version="1.1" 
+  xmlns="http://www.w3.org/2000/svg" 
+  fill="currentColor">
+   
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> 
+            <g id="Dribbble-Light-Preview" transform="translate(-139.000000, -600.000000)" fill="currentColor"> 
+            <g id="icons" transform="translate(56.000000, 160.000000) "> 
+            <path d="M99.4396071,444.343125 C96.1562532,441.216125 90.8432468,441.216125 87.5598929,444.343125 C84.284939,447.462125 84.284939,452.538125 87.5598929,455.657125 C90.8432468,458.784125 96.1562532,458.783125 99.4396071,455.657125 C102.722961,452.530125 102.722961,447.470125 99.4396071,444.343125 M100.924309,457.071125 C96.824054,460.976125 90.175446,460.976125 86.0751912,457.071125 C81.9749363,453.166125 81.9749363,446.834125 86.0751912,442.929125 C90.175446,439.023125 96.824054,439.024125 100.924309,442.929125 C105.024564,446.834125 105.024564,453.166125 100.924309,457.071125 M97.9549053,454.242125 L89.0456447,445.757125 C91.5057976,443.414125 95.4947524,443.414125 97.9549053,445.757125 C100.415058,448.100125 100.415058,451.899125 97.9549053,454.242125" id="contrast-[#1428]"> 
+          </path> 
+     
+      </g> 
+    </g> 
+  </g>
+</svg>
+)
+}
 
 export const ScanIcon = ({size, height}) => {
 return(
@@ -34,6 +84,31 @@ return(
   </svg>
 )
 }
+
+export const PrismIcon = ({size, height}) => {
+  return(
+    <svg 
+    viewBox="0 0 20 20" 
+    height={size || height || 20}
+    size={size || height || 20}
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+      <g id="SVGRepo_bgCarrier" stroke-width="0" />
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+        <g id="SVGRepo_iconCarrier"> 
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> 
+        <g id="Dribbble-Light-Preview" transform="translate(-60.000000, -4559.000000)" fill="currentColor"> 
+        <g id="icons" transform="translate(56.000000, 160.000000)"> 
+        <path d="M6.70247571,4412.07175 L12.0994757,4404.08575 C12.3864757,4403.69975 13.0004757,4403.90275 13.0004757,4404.38375 L13.0004757,4415.43475 C13.0004757,4415.82075 12.5804757,4416.06175 12.2474757,4415.86675 L6.85047571,4412.80175 C6.59347571,4412.65075 6.52447571,4412.31075 6.70247571,4412.07175 L6.70247571,4412.07175 Z M21.1494757,4412.80175 L15.7534757,4415.86675 C15.4194757,4416.06175 15.0004757,4415.82075 15.0004757,4415.43475 L15.0004757,4404.38375 C15.0004757,4403.90275 15.6134757,4403.69975 15.9014757,4404.08575 L21.2984757,4412.07175 C21.4754757,4412.31075 21.4064757,4412.65075 21.1494757,4412.80175 L21.1494757,4412.80175 Z M15.0004757,4399.52575 L15.0004757,4399.52575 C14.5184757,4398.82475 13.4824757,4398.82475 13.0004757,4399.52575 L13.0004757,4399.52575 L4.24047571,4412.02975 C3.80847571,4412.60975 3.97647571,4413.43575 4.60047571,4413.80175 L13.0004757,4418.62575 L13.4234757,4418.85375 C13.7834757,4419.04775 14.2164757,4419.04775 14.5764757,4418.85375 L15.0004757,4418.62575 L23.4004757,4413.80175 C24.0234757,4413.43575 24.1914757,4412.60975 23.7604757,4412.02975 L15.0004757,4399.52575 Z" 
+        id="3d_modelling_round-[#820]" /> 
+        </g>
+         </g> 
+         </g> 
+         </g>
+         </svg>
+  )
+  }
+
 export const ChevronDown = ({fill, size, height, width, ...props}) => {
   return (
     <svg
@@ -115,8 +190,6 @@ export const DiscordIcon = ({}) => {
 </svg>
  )
 }
-
-
 
 
 export const Flash = ({

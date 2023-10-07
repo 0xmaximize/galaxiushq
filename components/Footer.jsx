@@ -11,7 +11,7 @@ function Footer() {
 	<>
 	<footer className={`${styles.footer} md:mx-20`}>
 		<Divider className="my-10" />
-		<div className="md:flex justify-around items-start md:px-10">
+		<div className="grid grid-cols-2 md:flex justify-around items-start px-4 gap-10 md:px-10">
 			<ul>
 				<span aria-label="Trade" className='font-bold mb-2'>Learn</span>
 				{learnLinks.map((data) => (
@@ -28,7 +28,7 @@ function Footer() {
 				<span aria-label="Trade" className='font-bold mb-2'>Build</span>
 				{usageLinks.map((data) => (
 					<li key='Trade' className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
-				))}
+				))}   
 			</ul>
 			<ul>
 				<span aria-label="Trade" className='font-bold mb-2'>Usage</span>
@@ -45,7 +45,7 @@ function Footer() {
 			</ul>
 		</div>
 		<div className='flex'>
-		<Divider className="my-1" />
+		<Divider className="mt-10" />
 		</div>
 		<div className=''>
 			<div className="md:flex justify-between items-center">
@@ -54,7 +54,7 @@ function Footer() {
 						Galaxius - The blockchain gamification 
 					</p>
 				</div>
-			<div className='flex gap-4 my-4 md:my-0'>
+			<div className='flex justify-end items-end gap-4 my-4 md:my-0'>
 				<FaDiscord />
 				<Divider className='h-4' orientation="vertical" />
 				<FaTwitter />
@@ -67,7 +67,7 @@ function Footer() {
 				<p className='hidden md:block text-[12px] text-gray-500 '>
 				This website is maintained by the Galaxius Foundation on behalf of the decentralized community. The contents and opinions of this website do not necessarily reflect those of the galaxius foundation. This website links to projects, dApps and cryptocurrency exchanges as a service to the public. The Galaxius does not warrant that the information provided by these websites is correct, complete, and up-to-date. The Galaxius Foundation is not responsible for the content of those websites and expressly rejects any liability for damages of any kind resulting from the use, reference to, or reliance on any information contained within these websites. If you spot an error or issue on this website, please email marketing@galaxius.xyz
 				</p>
-			<div className="flex justify-start items-center">
+			<div className="flex justify-start gap-2 items-center">
 				<p className=' my-4 text-gray-400 text-[10px]'> ©2023 Galaxius Foundation </p>
 				<Divider className='h-4' orientation="vertical" />
 				<p className='my-4 text-gray-400 hover:text-white text-[10px]'>

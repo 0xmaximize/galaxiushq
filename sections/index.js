@@ -1,13 +1,19 @@
 import Hero from './Hero';
-import About from './About'
-import DaoComponent from './DAO';
+import About from './About';
+import Mining from './Mining';
 import Insight from './Insight';
-import Newsletter from './Newsletter';
+import Brand from './Brand';
+import Step from './Steps';
+import Token from './Token';
+import Community from './Community';
 
 export {
   Hero,
   About,
-  DaoComponent,
   Insight,
-  Newsletter
+  Token,
+  Mining,
+  Brand,
+  Step,
+  Community,
 };

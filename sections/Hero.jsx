@@ -4,33 +4,41 @@ import { motion } from 'framer-motion';
 import styles from '../styles';
 import EncryptButtons from '../components/EncryptButton';
 import Typewriter from 'typewriter-effect';
-import Spline from '@splinetool/react-spline';
-import { fadeIn } from '../utils/motion';
+import { fadeIn, slideIn } from '../utils/motion';
 import { HomeIcon, ScanIcon } from '../components/Icon';
-import { SiExpo } from 'react-icons/si'
+import Spline from '@splinetool/react-spline';
+
 const icons = {
   home:  <HomeIcon size={22}/>,
   scan:  <ScanIcon size={22}/>
-
 };
 
 const buttonText1 = () => "Launch Portal";
 const buttonText2 = () => "Enter Galaverse";
+const screenText1 = () => "Portal";
+const screenText2 = () => "Explore";
+
 
 function Hero() {
-
   return(
-    <section className={`bg-gradient-to-t from-black to-white/5 `}>
-      <div className={`justify-center items-center px-10 md:px-4 md:pt-12 lg:mx-16`}>
-        <div className='md:flex md:my-10 py-10 md:justify-around md:items-start md:flex-1 '>
+    <section className={`${styles.Hero}`}>
+      <div className='flex justify-center items-center'>
+        <div className={`${styles.yPadding} md:flex md:justify-around lg:justify-around md:items-start lg:flex-1`}>
           <div className='grid grid-cols-1'>
-            <span 
-            className="text-[32px] md:text-[30px] lg:text-[52px] text-start  
-            font-bold md:font-extrabold text-blue-50">
-             An blockchain portal 
-            </span>
-            <span className="text-[28px] md:text-[30px] lg:text-[52px] text-start 
-            font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-blue-300 to-emerald-600">
+            <motion.span 
+              initial="hidden"
+              whileInView="show"
+              variants={fadeIn('down', 'tween', 0.25, 0.5)}
+              className="text-[32px] md:text-[30px] lg:text-[56px] text-start  
+              font-extrabold md:font-black text-white">
+                An blockchain portal 
+            </motion.span>  
+            <motion.p 
+              initial="hidden"
+              whileInView="show"
+              variants={fadeIn('center', 'tween', 0.75, 0.5)}
+              className='font-black text-[32px] md:text-[30px] lg:text-[54px] flex gap-2 md:gap-4'> with
+            <span className="text-transparent bg-clip-text bg-gradient-to-l from-blue-300 to-emerald-600">
               <Typewriter 
                 options={{
                 autoStart: true,
@@ -38,39 +46,63 @@ function Hero() {
                 delay: 40,
                 strings:
                 [
-                  "Exploring a universe",
-                  "Find an experience ",
-                  "The future of gaming",
-                  "Enter the Galaverse",
+                  "enviroment",
+                  "eco-friendly",
+                  "sustainable",
+                  "valuable",
                 ]
               }}
               />
             </span>
-              <motion.p className='text-[16px] my-4 md:max-w-[300px] lg:max-w-[600px] font-mono text-white/50'>
-                Galaxius is an an operable blockchain providing the database, oracle network and Gaming-platform.
-              </motion.p>
-              <div className='flex gap-4  md:gap-4 my-10'>
-              <div className='md:w-[200px] hidden md:flex'>
-             <EncryptButtons getTargetText={buttonText1} icons={icons.home}/>
-             </div>
-             <div className='md:max-w-[300px] '>
-             <EncryptButtons getTargetText={buttonText2} icons={icons.scan} />
-             </div>
-             </div>
+            </motion.p>
+            <motion.span 
+              initial="hidden"
+              whileInView="show"
+              variants={fadeIn('up', 'tween', 1.25, 0.5)}
+            className={`${styles.textGray} hidden md:flex my-4 md:max-w-[300px] lg:max-w-[540px]`}>   
+              Build and scale a modern blockchain and decentralized world based on 
+              user experience to a better level in the future.
+            </motion.span>
+            <div className='flex gap-4 my-10'>
+              <motion.div
+                  initial="hidden"
+                  whileInView="show"
+                  variants={fadeIn('up', 'tween', 1.75, 0.5)}
+              className='md:w-[340px] lg:w-[200px] hidden md:flex'>
+                <EncryptButtons getTargetText={buttonText1} icons={icons.home}/>
+              </motion.div>
+              <motion.div 
+               initial="hidden"
+               whileInView="show"
+               variants={fadeIn('up', 'tween', 2.25, 0.5)}
+               className='md:w-[400px] lg:w-[300px] hidden md:flex '>
+                <EncryptButtons getTargetText={buttonText2} icons={icons.scan} />
+              </motion.div>
+              <motion.div
+                  initial="hidden"
+                  whileInView="show"
+                  variants={fadeIn('up', 'tween', 1.25, 0.25)}
+              className='flex w-[130px] md:hidden'>
+                <EncryptButtons getTargetText={screenText1} icons={icons.home}/>
+              </motion.div>
+              <motion.div 
+               initial="hidden"
+               whileInView="show"
+               variants={fadeIn('up', 'tween', 1.75, 0.25)}
+               className='flex md:hidden'>
+                <EncryptButtons getTargetText={screenText2} icons={icons.scan} />
+              </motion.div>
+            </div>
+          </div>
+          <div className='hidden md:flex w-[500px] h-[500px]'> 
           
           </div>
-          <motion.div 
-             className='hidden lg:flex w-[500px] h-[500px]'
-             initial="hidden"
-             whileInView="show"
-             variants={fadeIn('center', 'tween', 0.5, 1)}
-             > 
-              <Spline scene="https://prod.spline.design/7E6tYNHzojhg7Ng6/scene.splinecode" />
-            </motion.div>
         </div>  
+    
       </div>
+    
     </section>
-  );
+    );
 }
 
 export default Hero;

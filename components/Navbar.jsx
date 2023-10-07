@@ -35,12 +35,12 @@ export default function Navbar() {
   };
   
   return (
-    <section className='w-full bg-white/5 overflow-hidden '>
-      <div className="flex justify-between mx-4 md:mx-6 lg:mx-20 py-3">
+    <section className='w-full bg-transparent overflow-hidden '>
+      <div className="flex justify-between mx-4 md:mx-6 lg:mx-20 lg:px-20  py-4">
         <div className="flex justify-between md:gap-4 lg:gap-20">
           <Link href='/'>
-            <div className="flex gap-1">
-              <h4 className="font-semibold mt-[3px] hidden lg:flex text-[20px]">Galaxius</h4>    
+            <div className="flex justify-center items-center gap-1">
+              <img src='./galax-text.svg' alt='' className="w-[120px] h-[30px] md:w-[120px] md:h-[40px] first-line:lg:w-[140px] lg:h-[40px] object-contain"/>
             </div>
           </Link>
         </div>
@@ -95,7 +95,7 @@ export default function Navbar() {
                     endContent={icons.chevron}
                     radius="sm"
                   >
-                  <p className=" text-[14px]">Galaverse</p>
+                  <p className=" text-[14px]">Building</p>
                   </Button>
                 </DropdownTrigger>    
                 <DropdownMenu

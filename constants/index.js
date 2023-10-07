@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+
 
 export const technologyLinks = [
   {
@@ -23,7 +23,6 @@ export const technologyLinks = [
     icon:"scale"
   }
 ]
-
 
 
 export const tradeLinks = [
@@ -86,40 +85,53 @@ export const daoLinks = [
 
 ]
 
-export const cardsLinks = [
+export const miningLinks = [
   {
-    url: "./aurora1.png",
-    title: "Galaxius Portal",
-    hoverUrl: "./aurora2.png",
-
+    title:"Modern facility",
+    description:
+    "Mining GALA a scales apps to meet user friendly UI & decentralized ",
+    to:"/",
+    icon:"prism"
   },
   {
-    url: "https://img.freepik.com/free-vector/gradient-galaxy-background_23-2148965436.jpg?w=360",
-    title: "The Galaverse",
-    hoverUrl: "https://img.freepik.com/free-vector/gradient-bright-light-galaxy-background_23-2148966976.jpg",
-
+    title: "Fast APY",
+    description:"Add a liquidity pools from your side",
+    to:"/",
+    icon:"home"
+    
   },
   {
-    url: "https://img.freepik.com/free-vector/gradient-bright-light-galaxy-background_23-2148966976.jpg",
-    title: "OP Bridge",
-    hoverUrl: "https://img.freepik.com/free-vector/retro-style-futuristic-landscape-background_52683-18732.jpg",
+    title: "Modern Technology",
+    description:"buy a crypto via credit card today",
+    to:"/",
+    icon:"scan"
+  }
+]
 
+export const EncryptLinks = [
+  {
+    header: "BENEFIT",
+    title: "Farm with Galaxius",
+    description: "Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI ",
+    to: "/",
+    icon: "prism"
   },
   {
-    url: "https://img.freepik.com/free-vector/retro-style-futuristic-landscape-background_52683-18732.jpg",
-    title: "Collectible",
-    hoverUrl: "https://img.freepik.com/free-vector/gradient-galaxy-background_23-2148965436.jpg?w=360",
-
+    header: "BLOCKCHAIN",
+    title: "Galaxius Blockchain",
+    description: "Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI ",
+    to:"/",
+    icon:"scan"
   },
   {
-    url: "https://images8.alphacoders.com/133/1330719.png",
-    title: "Become a team",
-    hoverUrl: "https://img.freepik.com/free-vector/gradient-bright-light-galaxy-background_23-2148966976.jpg",
-
+    header: "BUILD",
+    title:"Gala Collection",
+    description: "Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI ",
+    to:"/",
+    icon:"circle"
   },
-  
-];
 
+]
 
 export const exploreLinks = [
   {

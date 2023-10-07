@@ -1,76 +1,185 @@
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef, useState } from "react";
-import { cardsLinks } from "../constants";
+import { EncryptLinks } from "../constants";
+import styles from "../styles";
+import EncryptCard from "../components/EncryptCard";
+import { PrismIcon, Circle, ScanIcon } from '../components/Icon';
+import { motion } from 'framer-motion';
 import { fadeIn } from "../utils/motion";
+
+const icons = {
+  prism: <PrismIcon className='text-white' size={22}/>,
+  circle: <Circle className='text-white' size={22}/>,
+  scan: <ScanIcon className='text-white' size={22} />
+}
+
+const CardA = [
+  {
+    header : 'BENEFIT',
+    title : 'Farm with Galaxius',
+    description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
+    icon: 'prism'
+  } 
+]
+
+const CardB = [
+  {
+    header : 'BENEFIT',
+    title : 'Farm with Galaxius',
+    description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
+    icon: 'scan'
+  } 
+]
+
+
+const CardC = [
+  {
+    header : 'BENEFIT',
+    title : 'Farm with Galaxius',
+    description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
+    icon: 'circle'
+
+  } 
+]
+
+const CardD = [
+  {
+    header : 'BENEFIT',
+    title : 'Farm with Galaxius',
+    description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
+    icon: 'prism'
+
+  } 
+]
+
+const CardE = [
+  {
+    header : 'BENEFIT',
+    title : 'Farm with Galaxius',
+    description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
+    icon: 'prism'
+
+  } 
+]
+
+const CardF = [
+  {
+    header : 'BENEFIT',
+    title : 'Farm with Galaxius',
+    description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
+    icon: 'prism'
+
+  } 
+]
 
 const About = () => {
   return (
-    <div className="">
-      <HorizontalScrollCarousel />
-    </div>
-  );
-};
+    <section className={`${styles.padding}`}>
+      <div className={`${styles.xPadding}`}>
+        <div className="flex md:justify-center lg:justify-center items-center px-4 md:px-0">
+          <div className="text-center">
+            <span className='text-gray-500 font-semibold'>
+              PORTAL EXPEDITION
+            </span>
+            <h1 className="font-black my-4 md:text-5xl">
+              Explore a blockchain worlds       
+            </h1>
+            <p className={styles.textGray}> Try the Galaxius features to get a new experience in your blockhain </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4 mt-10 md:justify-center lg:justify-start lg:items-start">
+            
+              {CardA.map((data, index) => (
+                <motion.div  
+                initial="hidden"
+                whileInView="show"
+                variants={fadeIn('up', 'tween', 0.2, 0.5)}
+                className="md:w-[340px] lg:w-[400px] justify-center items-center" key={index}>
+                  <EncryptCard 
+                  header={data.header} 
+                  title={data.title} 
+                  text={data.description} 
+                  icon={icons[data.icon]}
+                  />
+                </motion.div >
+                ))}
 
-const HorizontalScrollCarousel = () => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
+              {CardB.map((data, index) => (
+                <motion.div  
+                initial="hidden"
+                whileInView="show"
+                variants={fadeIn('up', 'tween', 0.4, 0.5)}
+                className="md:w-[340px] lg:w-[400px] justify-center items-center" key={index}>
+                  <EncryptCard 
+                  header={data.header} 
+                  title={data.title} 
+                  text={data.description} 
+                  icon={icons[data.icon]}
+                  />
+                </motion.div >
+              ))}
 
-  const x = useTransform(scrollYProgress, [0, 1], ["5%", "-90%"]);
+              {CardC.map((data, index) => (
+                <motion.div  
+                initial="hidden"
+                whileInView="show"
+                variants={fadeIn('up', 'tween', 0.6, 0.5)}
+                className="md:w-[340px] lg:w-[400px] justify-center items-center" key={index}>
+                  <EncryptCard 
+                  header={data.header} 
+                  title={data.title} 
+                  text={data.description} 
+                  icon={icons[data.icon]}
+                  />
+                </motion.div >
+              ))}
 
-  return (
-    <section ref={targetRef} className="relative h-[300vh]">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-14">
-          {cardsLinks.map((card) => {
-            return <Card card={card} key={card.id} />;
-          })}
-        </motion.div>
+              {CardD.map((data, index) => (
+                <motion.div  
+                initial="hidden"
+                whileInView="show"
+                variants={fadeIn('up', 'tween', 0.8, 0.5)}
+                className="md:w-[340px] lg:w-[400px] justify-center items-center" key={index}>
+                  <EncryptCard 
+                  header={data.header} 
+                  title={data.title} 
+                  text={data.description} 
+                  icon={icons[data.icon]}
+                  />
+                </motion.div >
+              ))}
+
+              {CardE.map((data, index) => (
+                <motion.div  
+                initial="hidden"
+                whileInView="show"
+                variants={fadeIn('up', 'tween', 1, 0.5)}
+                className="md:w-[340px] lg:w-[400px] justify-center items-center" key={index}>
+                  <EncryptCard 
+                  header={data.header} 
+                  title={data.title} 
+                  text={data.description} 
+                  icon={icons[data.icon]}
+                  />
+                </motion.div >
+              ))}
+
+              {CardF.map((data, index) => (
+                <motion.div  
+                initial="hidden"
+                whileInView="show"
+                variants={fadeIn('up', 'tween', 1.2, 0.5)}
+                className="md:w-[340px] lg:w-[400px] justify-center items-center" key={index}>
+                  <EncryptCard 
+                  header={data.header} 
+                  title={data.title} 
+                  text={data.description} 
+                  icon={icons[data.icon]}
+                  />
+                </motion.div >
+              ))}
+
+            </div>
+          </div>
+        </div>   
       </div>
     </section>
-  );
-};
-
-const Card = ({ card }) => {
-  const [hovered, setHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setHovered(false);
-  };
-
-  return (
-    <motion.div
-      initial="hidden"
-      whileInView="show"
-      variants={fadeIn("up", "tween", 0.2, 0.4)}
-      key={card.id}
-      className="group relative rounded-3xl w-[400px] h-[360px] md:h-[450px] md:w-[450px] overflow-hidden"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div
-        style={{
-          backgroundImage: hovered
-            ? `url(${card.hoverUrl})` // Change to hover background image
-            : `url(${card.url})`, // Default background image
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          transition: "background-image 0.3s ease", // Add a transition effect
-        }}
-        className="absolute inset-0 z-0"
-      />
-
-      <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 rounded-xl text-3xl font-black text-white backdrop-blur-lg">
-          {card.title}
-        </p>
-      </div>
-    </motion.div>
   );
 };
 
