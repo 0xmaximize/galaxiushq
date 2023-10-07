@@ -19,7 +19,7 @@ const Insight = () => {
     return(
     <section className={`${styles.centered}`}> 
     <div className={`${styles.insightPadding} px-6 md:px-0 lg:px-20`}>
-      <div className=' bg-[#1010106b] rounded-xl md:rounded-3xl shadow-lg shadow-emerald-100/5'>
+      <div className=' bg-gradient-to-b from-[#0f0f0f] to-[#0f0f0f] rounded-xl md:rounded-3xl'>
       <div className={`md:flex md:justify-between p-6 md:p-4 md:items-start px-6 md:px-4 mt-10 `}>
         <div className='justify-center items-center  md:px-10  md:my-10'>
           <span className='text-gray-600 md:text-[16px] text-sm font-semibold'>
