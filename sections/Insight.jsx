@@ -1,8 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import styles from '../styles';
-import { fadeIn } from '../utils/motion';
 import { RxCornerTopRight, RxCornerBottomRight } from 'react-icons/rx';
 import { Counter } from '../components';
 import EncryptButtons from '../components/EncryptButton';
@@ -19,7 +16,7 @@ const Insight = () => {
     return(
     <section className={`${styles.centered}`}> 
     <div className={`${styles.insightPadding} px-6 md:px-0 lg:px-20`}>
-      <div className=' bg-gradient-to-b from-[#0f0f0f] to-[#0f0f0f] rounded-xl md:rounded-3xl'>
+      <div className=' bg-gradient-to-b from-[#0f0f0f] to-[#0f0f0f] rounded-2xl md:rounded-3xl'>
       <div className={`md:flex md:justify-between p-6 md:p-4 md:items-start px-6 md:px-4 mt-10 `}>
         <div className='justify-center items-center  md:px-10  md:my-10'>
           <span className='text-gray-600 md:text-[16px] text-sm font-semibold'>
