@@ -13,7 +13,7 @@ const EncryptCard = ({ text, header, title, icon }) => {
 
       className="group relative justify-center items-center max-w-[400px] 
       flex-nowrap overflow-hidden rounded-xl border-[2px] border-white/5 hover:border-emerald-500 hover:text-emerald-500 hover:bg-white/10  px-4 py-2 font-mono font-medium text-gray-400 transition-colors 
-      bg-gray-500/5 
+      bg-[#0b0b0b]
        "
     >
       <div className="relative z-10 mx-4 grid text-start items-center gap-4 py-8">

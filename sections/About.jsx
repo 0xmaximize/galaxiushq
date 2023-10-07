@@ -79,7 +79,7 @@ const About = () => {
             <span className='text-gray-500 font-semibold'>
               PORTAL EXPEDITION
             </span>
-            <h1 className="font-black my-4 md:text-5xl">
+            <h1 className="font-black my-4 text-3xl md:text-5xl">
               Explore a blockchain worlds       
             </h1>
             <p className={styles.textGray}> Try the Galaxius features to get a new experience in your blockhain </p>
