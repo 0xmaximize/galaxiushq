@@ -47,7 +47,7 @@ const Community = () => {
   return (
     <section className={`${styles.Upadding} md:px-10 md:mx-10`}>
       <div className={`${styles.xPadding} md:mt-10 mx-4 md:px-4`}>
-        <div className="flex md:justify-center lg:justify-between items-center">    
+        <div className="grid md:flex md:justify-center lg:justify-between items-center">    
             <div className="text-start">
               <span className='text-gray-600  md:text-[16px] font-black'>
                   COMMUNITY
