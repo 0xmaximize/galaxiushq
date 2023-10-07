@@ -16,7 +16,7 @@ const Insight = () => {
     return(
     <section className={`${styles.centered}`}> 
     <div className={`${styles.insightPadding} px-6 md:px-0 lg:px-20`}>
-      <div className=' bg-[#181818] rounded-2xl md:rounded-3xl'>
+      <div className=' bg-[#0a0a0a] rounded-2xl md:rounded-3xl'>
       <div className={`md:flex md:justify-between p-6 md:p-4 md:items-start px-6 md:px-4 mt-10 `}>
         <div className='justify-center items-center  md:px-10  md:my-10'>
           <span className='text-gray-600 md:text-[16px] text-sm font-semibold'>
@@ -33,7 +33,6 @@ const Insight = () => {
           </div>
         </div>
         <div className=' px-4'> 
-
         <div className='flex my-4 justify-end items-start'>
             <div className='py-10 md:py-10 md:px-8 justify-end'>
             <p className='font-normal flex text-3xl lg:text-6xl text-end'> 

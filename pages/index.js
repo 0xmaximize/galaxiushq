@@ -1,48 +1,40 @@
 'use client';
-import { useEffect, useState } from 'react';
-import { Navbar, Footer, Loader } from '../components'
+import { Navbar, Footer } from '../components'
 import { Hero, Insight,  Mining, About, Brand, Step, Token, Community } from '../sections';
-const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  
-  useEffect(() => {
-    const loadingTimeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 4000);
-    return () => clearTimeout(loadingTimeout);} ,
-    []);
+import { Divider } from '@nextui-org/react';
 
+const Home = () => {
     return (
-    <div className="bg-black">
-      <>
-      {isLoading ? (
-        <div className='h-screen w-full flex items-center justify-center'>
-          <Loader />
+    <container>
+        <Navbar />
+        <div className='relative'>  
+        <video src='./fluted-glass.webm' loop autoPlay muted className='md:flex z-0 absolute'/>
+        <Hero />
+      </div>
+      <div className='relative z-10 particles-image'>
+        <Insight /> 
+        <Mining />
         </div>
-      ) : (
-      <>
-        <div className='relative'>
-          <Navbar />
-          <video src='./fluted-glass.webm' loop autoPlay muted className='md:flex z-0 absolute'/>
-          <Hero />
-        </div>
-        <div className='relative z-10'>
-        <Insight />
-        </div>
-          <Mining />
+        <div className='relative z-10 particles-image'>
      
         <Step />
-        <div className='relative bc-image'>
-        <Token />
         </div>
-        <About />
-        <Brand />
-        <Community />
-        <Footer />
-      </>
-      )}
-      </>
-    </div>
+   
+     
+      <div style={{background:'#0a0a0a'}}>
+      <Divider className=' bg-white/5 my-10'/>
+
+    
+      <div className='relative '>
+
+        <Token />
+      </div>
+      <About />
+      <Brand />
+      <Community />
+      <Footer />
+      </div>
+    </container>
   );
 }
 

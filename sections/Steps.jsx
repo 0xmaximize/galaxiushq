@@ -8,7 +8,7 @@ import { PrismIcon, ArrowTopRight } from '../components/Icon';
 const Step = () => {
   return(
     <section className={`${styles.padding} md:px-2`}>
-      <div className='flex justify-center mx-4 md:px-10'>
+      <div className='flex justify-center mx-4 md:px-10 '>
         <div className="grid md:grid-rows-4 md:last:grid-flow-col gap-6 ">
           <motion.div 
           whileHover={{scale:1.02}}
@@ -16,8 +16,7 @@ const Step = () => {
           whileInView="show"
           variants={fadeIn('up', 'tween', 0.2, 0.5)}
           className={
-            `${styles.hovered} md:row-span-4 lg:w-[400px] 
-            bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-sky-500/10 via-sky-600/10 to-sky-800/5 from-10% via-25% to-65%`
+            `${styles.hovered} md:row-span-4 lg:w-[400px] bg-white/5 backdrop-blur-xl hover:bg-white/10 `
             }
           >
             <span className='font-semibold  group-hover:text-white'>
@@ -36,7 +35,7 @@ const Step = () => {
           whileInView="show"
           variants={fadeIn('up', 'tween', 0.4, 0.5)}
           className={
-            `${styles.hovered} group md:row-span-2 md:col-span-2  lg:w-[600px] bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-sky-500/10 via-sky-600/10 to-sky-800/5 from-10% via-25% to-65%`
+            `${styles.hovered} group md:row-span-2 md:col-span-2 bg-white/5 backdrop-blur-xl hover:bg-white/10  lg:w-[600px] `
             }
           >
             <div className='flex justify-between'>
@@ -54,7 +53,7 @@ const Step = () => {
           whileInView="show"
           variants={fadeIn('up', 'tween', 0.6, 0.5)}
           className={
-            `${styles.hovered} group md:row-span-2 py-4 px-4 rounded-2xl bg-[radial-gradient(circle_at_left,_var(--tw-gradient-stops))] from-sky-500/10 via-sky-600/5 to-sky-800/5`
+            `${styles.hovered} group md:row-span-2 py-4 px-4 rounded-2xl bg-white/5 backdrop-blur-xl hover:bg-white/10 `
             }
           >
             <div className='flex justify-between'>
@@ -71,7 +70,7 @@ const Step = () => {
           whileInView="show"
           variants={fadeIn('up', 'tween', 0.8, 0.5)}
           className={
-          `${styles.hovered} group md:row-span-2 py-4 px-4 rounded-2xl bg-[radial-gradient(circle_at_left,_var(--tw-gradient-stops))] from-sky-500/10 via-sky-600/10 to-sky-800/5`
+          `${styles.hovered} group md:row-span-2 py-4 px-4 rounded-2xl bg-white/5 backdrop-blur-xl hover:bg-white/10 `
             }
           >
             <div className='flex justify-between'>

@@ -1,12 +1,10 @@
 'use client';
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import styles from '../styles';
 import EncryptButtons from '../components/EncryptButton';
 import Typewriter from 'typewriter-effect';
-import { fadeIn, slideIn } from '../utils/motion';
+import { fadeIn } from '../utils/motion';
 import { HomeIcon, ScanIcon } from '../components/Icon';
-import Spline from '@splinetool/react-spline';
 
 const icons = {
   home:  <HomeIcon size={22}/>,
@@ -59,11 +57,12 @@ function Hero() {
               initial="hidden"
               whileInView="show"
               variants={fadeIn('up', 'tween', 1.25, 0.5)}
-            className={`${styles.textGray} hidden md:flex my-4 md:max-w-[300px] lg:max-w-[540px]`}>   
-              Build and scale a modern blockchain and decentralized world based on 
-              user experience to a better level in the future.
+              className={
+                `${styles.textGray} hidden md:flex my-4 md:max-w-[300px] lg:max-w-[540px]`
+                }
+              >   
+                Build and scale a modern blockchain and decentralized world based on user experience to a better level in the future.
             </motion.span>
-            
             <div className='flex gap-4 my-10'>
               <motion.div
                   initial="hidden"
@@ -96,7 +95,7 @@ function Hero() {
               </motion.div>
             </div>
           </div>
-          <div className='hidden md:flex w-[100px] lg:w-[500px] lg:h-[500px]'> 
+          <div className='hidden md:flex w-[100px] lg:w-[500px] lg:h-[500px] bg-[#338ef7]'> 
           
           </div>
         </div>  

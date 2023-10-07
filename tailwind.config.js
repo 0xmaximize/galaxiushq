@@ -9,8 +9,6 @@ module.exports = {
     './sections/**/*.{html,js,jsx}',
     './styles/**/*.{js,jsx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
-    
-
   ],
   mode: 'jit',
   
@@ -21,6 +19,7 @@ module.exports = {
       },
       colors: {
         'primary-dark': '#000',
+        'semi-dark':'#060708',
         'primary-white': '#fff',
           white: "#FFFFFF",
           black: "#000000",

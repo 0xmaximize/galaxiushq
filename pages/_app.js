@@ -2,22 +2,17 @@ import Head from 'next/head';
 import '../styles/globals.css';
 import "react-toastify/dist/ReactToastify.css";
 import { NextUIProvider } from '@nextui-org/react';
-import { 
-  ThirdwebProvider,
-  metamaskWallet, 
-  coinbaseWallet, 
-  zerionWallet,
-  trustWallet,
-  frameWallet,
-  bloctoWallet,
-  rainbowWallet,
-  magicLink,
-  } 
-  from '@thirdweb-dev/react';
-
+import { useEffect, useState } from 'react';
+import { Loader } from '../components'
 
 function MyApp({ Component, pageProps }) {
-
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const loadingTimeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
+    return () => clearTimeout(loadingTimeout);} ,
+    []);
   return(
     <>    
     <Head>
@@ -29,8 +24,14 @@ function MyApp({ Component, pageProps }) {
       
     </Head>
       <NextUIProvider>
-        <main className="dark text-foreground">
+        <main className="dark text-foreground bg-background">
+        {isLoading ? (
+          <div className='h-screen w-full flex items-center justify-center'>
+            <Loader />
+          </div>
+        ) : (
           <Component {...pageProps} />
+        )}
         </main>
       </NextUIProvider>       
     </>
