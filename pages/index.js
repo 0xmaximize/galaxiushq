@@ -13,7 +13,7 @@ const Home = () => {
     []);
 
     return (
-    <div className="bg-primary-dark">
+    <div className="bg-black">
       <>
       {isLoading ? (
         <div className='h-screen w-full flex items-center justify-center'>
