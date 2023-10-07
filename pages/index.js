@@ -23,15 +23,14 @@ const Home = () => {
       <>
         <div className='relative'>
           <Navbar />
-          <video src='./fluted-glass.webm' loop autoPlay muted className='md:block hidden z-0 absolute'/>
+          <video src='./fluted-glass.webm' loop autoPlay muted className='md:flex z-0 absolute'/>
           <Hero />
         </div>
         <div className='relative z-10'>
         <Insight />
         </div>
-        <div className='relative particles-image '>
           <Mining />
-        </div>
+     
         <Step />
         <div className='relative bc-image'>
         <Token />

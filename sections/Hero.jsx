@@ -29,7 +29,7 @@ function Hero() {
               initial="hidden"
               whileInView="show"
               variants={fadeIn('down', 'tween', 0.25, 0.5)}
-              className="text-[32px] md:text-[30px] lg:text-[56px] text-start  
+              className="text-[32px] md:text-[42px] lg:text-[56px] text-start  
               font-extrabold md:font-black text-white">
                 An blockchain portal 
             </motion.span>  
@@ -37,7 +37,7 @@ function Hero() {
               initial="hidden"
               whileInView="show"
               variants={fadeIn('center', 'tween', 0.75, 0.5)}
-              className='font-black text-[32px] md:text-[30px] lg:text-[54px] flex gap-2 md:gap-4'> with
+              className='font-black text-[32px] md:text-[42px] lg:text-[54px] flex gap-2 md:gap-4'> with
             <span className="text-transparent bg-clip-text bg-gradient-to-l from-blue-300 to-emerald-600">
               <Typewriter 
                 options={{
@@ -63,12 +63,13 @@ function Hero() {
               Build and scale a modern blockchain and decentralized world based on 
               user experience to a better level in the future.
             </motion.span>
+            
             <div className='flex gap-4 my-10'>
               <motion.div
                   initial="hidden"
                   whileInView="show"
                   variants={fadeIn('up', 'tween', 1.75, 0.5)}
-              className='md:w-[340px] lg:w-[200px] hidden md:flex'>
+              className='md:w-[200px] lg:w-[200px] hidden md:flex'>
                 <EncryptButtons getTargetText={buttonText1} icons={icons.home}/>
               </motion.div>
               <motion.div 
@@ -78,6 +79,7 @@ function Hero() {
                className='md:w-[400px] lg:w-[300px] hidden md:flex '>
                 <EncryptButtons getTargetText={buttonText2} icons={icons.scan} />
               </motion.div>
+              
               <motion.div
                   initial="hidden"
                   whileInView="show"
@@ -94,7 +96,7 @@ function Hero() {
               </motion.div>
             </div>
           </div>
-          <div className='hidden md:flex w-[500px] h-[500px]'> 
+          <div className='hidden md:flex w-[100px] lg:w-[500px] lg:h-[500px]'> 
           
           </div>
         </div>  

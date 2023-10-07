@@ -7,8 +7,8 @@ import { PrismIcon, ArrowTopRight } from '../components/Icon';
 
 const Step = () => {
   return(
-    <section className={`${styles.padding}`}>
-      <div className='flex justify-center  mx-4'>
+    <section className={`${styles.padding} md:px-2`}>
+      <div className='flex justify-center mx-4 md:px-10'>
         <div className="grid md:grid-rows-4 md:last:grid-flow-col gap-6 ">
           <motion.div 
           whileHover={{scale:1.02}}
@@ -16,14 +16,15 @@ const Step = () => {
           whileInView="show"
           variants={fadeIn('up', 'tween', 0.2, 0.5)}
           className={
-            `${styles.hovered} md:row-span-4 md:w-[300px] lg:w-[400px] bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-sky-500/10 via-sky-600/10 to-sky-800/5 from-10% via-25% to-65%`
+            `${styles.hovered} md:row-span-4 lg:w-[400px] 
+            bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-sky-500/10 via-sky-600/10 to-sky-800/5 from-10% via-25% to-65%`
             }
           >
             <span className='font-semibold  group-hover:text-white'>
               EXPLORE
             </span>
             <div className='grid mt-20 justify-end items-end'>
-              <h4 className='text-2xl md:text-3xl my-10 row-span-1 lg:mt-20 font-bold'>
+              <h4 className='text-2xl md:text-3xl my-8 md:my-10 lg:pb-20 md:pb-14 row-span-1 md:mt-20 font-bold'>
               Take part in a galaxius journey, more benefits and advantages               
               </h4>
               <PrismIcon className='text-white' size={22}/>
@@ -35,7 +36,7 @@ const Step = () => {
           whileInView="show"
           variants={fadeIn('up', 'tween', 0.4, 0.5)}
           className={
-            `${styles.hovered} group md:row-span-2 md:col-span-2 md:w-[460px] lg:w-[600px] bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-sky-500/10 via-sky-600/10 to-sky-800/5 from-10% via-25% to-65%`
+            `${styles.hovered} group md:row-span-2 md:col-span-2  lg:w-[600px] bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-sky-500/10 via-sky-600/10 to-sky-800/5 from-10% via-25% to-65%`
             }
           >
             <div className='flex justify-between'>
@@ -62,7 +63,7 @@ const Step = () => {
               <ArrowTopRight size={14} />
              </span>
             </div>
-            <h4 className='text-2xl font-bold mt-10 md:mt-36'> GALA-Proof SBT</h4>
+            <h4 className='text-2xl font-bold mt-14 md:mt-36'> GALA-Proof SBT</h4>
           </motion.div>
           <motion.div 
           whileHover={{scale:1.02}}
@@ -81,7 +82,7 @@ const Step = () => {
                 <ArrowTopRight size={14} />
               </span>
             </div>
-            <h4 className='text-2xl font-bold mt-10 md:mt-36'>See all events</h4>
+            <h4 className='text-2xl font-bold mt-14 md:mt-36'>See all events</h4>
           </motion.div>        
         </div>
       </div>

@@ -43,14 +43,14 @@ const icons = {
 
 const Mining = () => {
   return (
-    <section className='md:mt-20 md:py-20'>
+    <section className={`${styles.yPadding} md:mt-20 md:py-20 `}>
     <div className={`${styles.xPadding}  mx-3 px-3`}>
       <div className="flex md:justify-center lg:justify-between items-center">
         <div>
 
         </div>
         <div className="text-start">
-          <span className='text-gray-600  text-sm md:text-[16px] font-black'>
+          <span className='text-gray-600 text-sm md:text-[16px] font-black'>
           MINING
           </span>
           <h1 className="font-black text-3xl md:text-5xl mt-2 md:mt-4  max-w-[540px]">
@@ -62,7 +62,7 @@ const Mining = () => {
           <div className='grid md:grid-cols-2 md:gap-10'>
          {mining.map((data, index) => (
             <div key={index} className='my-4'>
-            <div className='flex items-center gap-2 mt-4'>
+            <div className='flex items-center gap-2 md:mt-4'>
                 <span className=''>{icons[data.icon]}</span>
                 <h1 className='font-bold text-[20px]'>{data.title}</h1>
             </div>

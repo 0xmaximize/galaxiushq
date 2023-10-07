@@ -8,7 +8,7 @@ import {
   DropdownMenu, 
 } from "@nextui-org/react";
 import { CgArrowTopRightR } from 'react-icons/cg';
-import {ChevronDown, WalletIcon, Data, Lock, Activity, Flash, Server, TagUser, Scale} from "./Icon.jsx";
+import {ChevronDown,  Data, Lock, Activity, Flash, Server, TagUser, Scale} from "./Icon.jsx";
 import Link from "next/link";
 import { useRouter } from 'next/router';
 import { technologyLinks, daoLinks, earnLinks } from "../constants/index.js";
@@ -24,7 +24,6 @@ export default function Navbar() {
 
   const icons = {
     chevron: <ChevronDown fill="currentColor " size={12} />,
-    wallets: <WalletIcon className="text-warning" fill="currentColor" size={30} />,
     scale: <Scale className="text-white" fill="currentColor" size={30} />,
     lock: <Lock className="text-success" fill="currentColor" size={30} />,
     activity: <Activity className="text-secondary" fill="currentColor" size={30} />,
