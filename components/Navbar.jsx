@@ -8,10 +8,13 @@ import {
   DropdownMenu, 
 } from "@nextui-org/react";
 import { CgArrowTopRightR } from 'react-icons/cg';
-import {ChevronDown,  Data, Lock, Activity, Flash, Server, TagUser, Scale} from "./Icon.jsx";
+import { ChevronDown } from "./Icon.jsx";
 import Link from "next/link";
 import { useRouter } from 'next/router';
-import { technologyLinks, daoLinks, earnLinks } from "../constants/index.js";
+import { technologyLinks } from "../constants/index.js";
+import EncryptButtons from "./EncryptButton.js";
+
+const buttonText1 = () => "Launch Portal";
 
 export default function Navbar() {
   const router = useRouter();
@@ -24,13 +27,6 @@ export default function Navbar() {
 
   const icons = {
     chevron: <ChevronDown fill="currentColor " size={12} />,
-    scale: <Scale className="text-white" fill="currentColor" size={30} />,
-    lock: <Lock className="text-success" fill="currentColor" size={30} />,
-    activity: <Activity className="text-secondary" fill="currentColor" size={30} />,
-    flash: <Flash className="text-primary" fill="currentColor" size={30} />,
-    server: <Server className="text-success" fill="currentColor" size={30} />,
-    user: <TagUser className="text-danger" fill="currentColor" size={30} />,
-    data: <Data className="text-primary" fill="currentColor" size={30} />,
   };
   
   return (
@@ -163,10 +159,8 @@ export default function Navbar() {
         
           </ul>
         <div className="flex justify-center items-center">
-          <div className="">
-            <Button size="md" variant="flat">
-               Launch Portal
-            </Button>
+          <div className="lg:max-w-[160px] lg:min-w-[160px] ">
+          <EncryptButtons getTargetText={buttonText1} icons={icons.home}/>
           </div>
         </div>
       </div>

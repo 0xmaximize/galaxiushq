@@ -1,44 +1,11 @@
 'use client'
 import styles from "../styles";
-import { PrismIcon, ScanIcon, Circle } from '../components/Icon';
-
-const mining = [
-   
-    {
-      title: "Eco-friendly",
-      description:"Renewable energy source by utilizing clean energy.",
-      to:"/",
-      icon:"prism"
-      
-    },
-    {
-      title:"Proof-of-Stake",
-      description:
-      "Provides the best performance with less energy enviroment.",
-      to:"/",
-      icon:"circle"
-    },
-    {
-      title:"Asset Ownership",
-      description:
-      "Gain real ownership of mining assets, providing security and flexibility.",
-      to:"/",
-      icon:"prism"
-    },
-    {
-      title: "Market Engagement",
-      description:"Can be trade or use in galaxius protocols, enhancing miners' financial options.",
-      to:"/",
-      icon:"scan"
-    },
-   
-  ]
-
-  
+import { Cloud, Battery, Circle, Activity, Server, TagUser } from '../components/Icon';
+ 
 const icons = {
-    prism: <PrismIcon className='text-white' size={22}/>,
+    cloud: <Cloud className='text-white' size={22}/>,
     circle: <Circle className='text-white' size={22} />,
-    scan: <ScanIcon />
+    battery: <Battery className='text-white' size={22} />,
 }
 
 const Mining = () => {
@@ -47,28 +14,37 @@ const Mining = () => {
     <div className={`${styles.xPadding}  mx-3 px-3`}>
       <div className="flex md:justify-center lg:justify-between items-center">
         <div>
-
         </div>
         <div className="text-start">
           <span className='text-gray-600 text-sm md:text-[16px] font-black'>
-          MINING
+            MINING
           </span>
           <h1 className="font-black text-3xl md:text-5xl mt-2 md:mt-4  max-w-[540px]">
-          NFT-Backed Mining: Revolution of mining
+            NFT-Backed Mining: Revolution of mining
           </h1>
-          <p className={`${styles.textGray}  my-4 md:max-w-[560px]`}>
-          a mining democratizes access concept & represent  range from mining equipment to mining pool shares.
+          <p className={`${styles.textGray}  my-4 md:max-w-[480px]`}>
+            a mining democratizes access concept & represent  range from mining equipment to mining pool shares.
           </p>         
-          <div className='grid md:grid-cols-2 md:gap-10'>
-         {mining.map((data, index) => (
-            <div key={index} className='my-4'>
-            <div className='flex items-center gap-2 md:mt-4'>
-                <span className=''>{icons[data.icon]}</span>
-                <h1 className='font-bold text-[20px]'>{data.title}</h1>
+          <div className='grid max-w-[500px]'>
+            <div className="flex gap-2 justify-start items-center mt-4">
+              <span>{icons.cloud}</span>
+              <p className="font-bold text-[18px]">Proof-of-Stake (PoS)</p>
             </div>
-            <p className={`${styles.textGray} md:max-w-[280px] my-2`}>{data.description}</p>
+            <p className={`${styles.textGray} my-2 `}> Implementation the Proof-of-Stake (PoS) system for defi applications and less energy than PoW system.</p>
+          </div>
+          <div className='grid max-w-[500px]'>
+            <div className="flex gap-2 justify-start items-center mt-4">
+              <span>{icons.battery}</span>
+              <p className="font-bold text-[18px]">Less Energy</p>
             </div>
-         ))}
+            <p className={`${styles.textGray} my-2 `}> Implementation the Proof-of-Stake (PoS) system for defi applications and less energy than PoW system.</p>
+         </div>
+         <div className='grid max-w-[500px]'>
+            <div className="flex gap-2 justify-start items-center mt-4">
+              <span>{icons.circle}</span>
+              <p className="font-bold text-[18px]">Proof-of-Stake (PoS)</p>
+            </div>
+            <p className={`${styles.textGray} my-2 `}> Implementation the Proof-of-Stake (PoS) system for defi applications and less energy than PoW system.</p>
          </div>
         </div>
       </div>   

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { MdOutlineArrowOutward } from 'react-icons/md';
 
 const EncryptCard = ({ text, header, title, icon }) => {
 
@@ -16,7 +17,11 @@ const EncryptCard = ({ text, header, title, icon }) => {
       bg-[#19191c] hover:bg-[#29292e]  px-4 py-2 font-mono font-medium text-gray-400 transition-colors"
     >
       <div className="relative z-10 mx-4 grid text-start items-center gap-4 py-8">
-          <h1 className="font-bold">{header}</h1>
+         <div className="flex justify-between">
+         <h1 className="font-bold">{header}</h1>
+
+          <MdOutlineArrowOutward size={20}/>
+         </div>
           <p className="text-2xl mt-10 font-bold">{title}</p>
           <span className="font-normal">{text}</span>
           <span className="mt-8"> {icon} </span>

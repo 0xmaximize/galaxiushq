@@ -3,7 +3,8 @@ import React from 'react';
 import styles from '../styles';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
-import { PrismIcon, ArrowTopRight } from '../components/Icon';
+import { MdOutlineArrowOutward } from 'react-icons/md';
+import { PrismIcon } from '../components/Icon';
 
 const Step = () => {
   return(
@@ -24,7 +25,7 @@ const Step = () => {
             </span>
             <div className='grid mt-20 justify-end items-end'>
               <h4 className='text-2xl md:text-3xl my-8 md:my-10 lg:pb-20 md:pb-14 row-span-1 md:mt-20 font-bold'>
-              Take part in a galaxius journey, more benefits and advantages               
+                Take part in a galaxius journey, more benefits and advantages               
               </h4>
               <PrismIcon className='text-white' size={22}/>
             </div>
@@ -41,7 +42,7 @@ const Step = () => {
             <div className='flex justify-between'>
               <h4 className='font-semibold'>PRESALE</h4>
               <span className="opacity-0 transition-opacity group-hover:opacity-100">
-                <ArrowTopRight size={16} />
+                <MdOutlineArrowOutward size={22} />
               </span>
             </div>
             <h4 className='text-2xl md:text-3xl my-10 font-bold mt-10 flex gap-2 items-center'> Take part in a galaxius journey, more benefits and advantages.</h4>
@@ -59,10 +60,10 @@ const Step = () => {
             <div className='flex justify-between'>
               <h4 className='font-semibold'> SOULBOUND</h4>
               <span className="opacity-0 transition-opacity group-hover:opacity-100">
-              <ArrowTopRight size={14} />
+              <MdOutlineArrowOutward size={22} />
              </span>
             </div>
-            <h4 className='text-2xl font-bold mt-14 md:mt-36'> GALA-Proof SBT</h4>
+            <h4 className='text-xl font-bold mt-14 md:mt-36'> GALA-Proof SBT</h4>
           </motion.div>
           <motion.div 
           whileHover={{scale:1.02}}
@@ -78,10 +79,10 @@ const Step = () => {
                 EVENTS
               </h4>
               <span className="opacity-0 transition-opacity group-hover:opacity-100">
-                <ArrowTopRight size={14} />
+                <MdOutlineArrowOutward size={22} />
               </span>
             </div>
-            <h4 className='text-2xl font-bold mt-14 md:mt-36'>See all events</h4>
+            <h4 className='text-xl font-bold mt-14 md:mt-36'>See all events</h4>
           </motion.div>        
         </div>
       </div>

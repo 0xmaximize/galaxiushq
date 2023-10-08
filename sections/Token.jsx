@@ -1,6 +1,6 @@
 'use client'
 import styles from "../styles";
-import { PrismIcon, ScanIcon, Circle } from '../components/Icon';
+import { PrismIcon, TagUser, Server, Circle } from '../components/Icon';
 
 const mining = [
    
@@ -8,7 +8,7 @@ const mining = [
       title: "Eco-friendly",
       description:"Renewable energy source by utilizing clean energy.",
       to:"/",
-      icon:"prism"
+      icon:"circle"
       
     },
     {
@@ -16,7 +16,7 @@ const mining = [
       description:
       "Provides the best performance with less energy enviroment.",
       to:"/",
-      icon:"circle"
+      icon:"tag"
     },
     {
       title:"Asset Ownership",
@@ -29,21 +29,22 @@ const mining = [
       title: "Market Engagement",
       description:"Can be trade or use in galaxius protocols, enhancing miners' financial options.",
       to:"/",
-      icon:"scan"
+      icon:"server"
     },
    
   ]
 
   
-const icons = {
+  const icons = {
     prism: <PrismIcon className='text-white' size={22}/>,
     circle: <Circle className='text-white' size={22} />,
-    scan: <ScanIcon />
+    tag: <TagUser className='text-white' size={22} />,
+    server: <Server className='text-white' size={22} />,
 }
 
 const Token = () => {
   return (
-    <section className={`${styles.Upadding} md:px-10 md:mx-10`}>
+    <section className={`${styles.Upadding} md:px-10 md:mx-10 z-10`}>
       <div className={`${styles.xPadding} md:mt-20 mx-4 md:px-4`}>
         <div className="flex md:justify-center lg:justify-between items-center">    
           <div className="text-start">

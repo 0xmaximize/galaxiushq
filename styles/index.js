@@ -10,7 +10,7 @@ const styles = {
 
   Upadding: 'md:py-10 my-10 px-2',
   textHeader: 'font-black text-3xl md:text-5xl',
-  textGray: 'text-white/50 font-normal tracking-wide',
+  textGray: 'text-gray-500 font-normal tracking-wide',
   footer: 'px-5 lg:px-20 mt-20',
   hovered:' py-5 px-5 rounded-2xl text-gray-400 border-white/10 border-[2px] hover:border-emerald-500 hover:text-emerald-500 hover:bg-white/10'
 };

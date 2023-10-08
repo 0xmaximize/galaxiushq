@@ -19,7 +19,7 @@ const screenText2 = () => "Explore";
 
 function Hero() {
   return(
-    <section className={`${styles.Hero}`}>
+    <section className={`${styles.Hero} lg:px-20`}>
       <div className='flex justify-center items-center'>
         <div className={`${styles.yPadding} md:flex md:justify-around lg:justify-around md:items-start lg:flex-1`}>
           <div className='grid grid-cols-1'>

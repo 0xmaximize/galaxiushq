@@ -3,27 +3,29 @@ import styles from "../styles";
 import EncryptCard from "../components/EncryptCard";
 import { PrismIcon, Circle, ScanIcon } from '../components/Icon';
 import { motion } from 'framer-motion';
+import { MdOutlineArrowOutward } from 'react-icons/md';
 import { fadeIn } from "../utils/motion";
 
 const icons = {
-  prism: <PrismIcon className='text-white' size={22}/>,
-  circle: <Circle className='text-white' size={22}/>,
-  scan: <ScanIcon className='text-white' size={22} />
+  prism: <PrismIcon className='' size={22} />,
+  circle: <Circle className='text-white' size={22} />,
+  scan: <ScanIcon className='text-white' size={22} />,
+  arrow: <MdOutlineArrowOutward className='' size={22} />
 }
 
 const CardA = [
   {
-    header : 'BENEFIT',
-    title : 'Farm with Galaxius',
+    header : 'MINING',
+    title : 'Start mining on Galaxius',
     description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
-    icon: 'prism'
+    icon: 'circle'
   } 
 ]
 
 const CardB = [
   {
-    header : 'BENEFIT',
-    title : 'Farm with Galaxius',
+    header : 'TOKEN',
+    title : 'GTX - Utility Token',
     description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
     icon: 'scan'
   } 
@@ -32,8 +34,8 @@ const CardB = [
 
 const CardC = [
   {
-    header : 'BENEFIT',
-    title : 'Farm with Galaxius',
+    header : 'SOULBOUND ',
+    title : 'GTX Soulbound NFT',
     description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
     icon: 'circle'
 
@@ -42,8 +44,8 @@ const CardC = [
 
 const CardD = [
   {
-    header : 'BENEFIT',
-    title : 'Farm with Galaxius',
+    header : 'PRODUCT',
+    title : 'Launch RTX-01 Edition',
     description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
     icon: 'prism'
 
@@ -52,8 +54,8 @@ const CardD = [
 
 const CardE = [
   {
-    header : 'BENEFIT',
-    title : 'Farm with Galaxius',
+    header : 'BETA',
+    title : 'Galaxius BETA Launch',
     description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
     icon: 'prism'
 
@@ -62,7 +64,7 @@ const CardE = [
 
 const CardF = [
   {
-    header : 'BENEFIT',
+    header : 'GALAVERSE',
     title : 'Farm with Galaxius',
     description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
     icon: 'prism'
