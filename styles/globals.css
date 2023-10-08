@@ -24,6 +24,12 @@ width: full;
 height: auto;
 }
 
+.labs-image {
+background-image: url("../public/labs.png");
+background-size: cover;
+width: full;
+height: auto;
+}
 
 @media screen and (max-width: 720px) {
   .bc-image {

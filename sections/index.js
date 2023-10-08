@@ -6,6 +6,7 @@ import Brand from './Brand';
 import Step from './Steps';
 import Token from './Token';
 import Community from './Community';
+import Order from './Order';
 
 export {
   Hero,
@@ -16,4 +17,5 @@ export {
   Brand,
   Step,
   Community,
+  Order
 };

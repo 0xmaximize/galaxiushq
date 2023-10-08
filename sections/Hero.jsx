@@ -95,7 +95,7 @@ function Hero() {
               </motion.div>
             </div>
           </div>
-          <div className='hidden md:flex w-[100px] lg:w-[500px] lg:h-[500px] bg-[#338ef7]'> 
+          <div className='hidden md:flex w-[100px] lg:w-[500px] lg:h-[500px] '> 
           
           </div>
         </div>  

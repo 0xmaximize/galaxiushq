@@ -10,7 +10,7 @@ function Footer() {
 	return (
 	<>
 	<footer className={`${styles.footer} md:mx-20`}>
-		<Divider className="my-10" />
+		<Divider className="my-10 " />
 		<div className="grid grid-cols-2 md:flex justify-around items-start px-4 gap-10 md:px-10">
 			<ul>
 				<span aria-label="Trade" className='font-bold mb-2'>Learn</span>

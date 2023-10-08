@@ -1,6 +1,6 @@
 'use client';
 import { Navbar, Footer } from '../components'
-import { Hero, Insight,  Mining, About, Brand, Step, Token, Community } from '../sections';
+import { Hero, Insight,  Mining, About, Brand, Step, Token, Community, Order} from '../sections';
 import { Divider } from '@nextui-org/react';
 
 const Home = () => {
@@ -8,32 +8,33 @@ const Home = () => {
     <container>
         <Navbar />
         <div className='relative'>  
-        <video src='./fluted-glass.webm' loop autoPlay muted className='md:flex z-0 absolute'/>
+        <video src='./fluted-glass.webm' loop autoPlay muted className='hidden  md:flex z-0 absolute'/>
         <Hero />
       </div>
-      <div className='relative z-10 particles-image'>
         <Insight /> 
-        <Mining />
+        <div className='relative z-10 labs-image'>
+          <Mining />
         </div>
-        <div className='relative z-10 particles-image'>
-     
-        <Step />
+        <div className='relative'>
+        <video src='./gitness.webm' loop autoPlay muted className='md:flex z-0 absolute'/>
+        <Step />    
         </div>
-   
-     
-      <div style={{background:'#0a0a0a'}}>
-      <Divider className=' bg-white/5 my-10'/>
-
-    
-      <div className='relative '>
-
+        
         <Token />
-      </div>
+
       <About />
       <Brand />
+
       <Community />
-      <Footer />
+      <div className='relative '>
+      <Order />
+      <video src='./gitness.webm' loop autoPlay muted className='md:flex z-0 '/>
+
+
       </div>
+
+      <Footer />
+
     </container>
   );
 }
