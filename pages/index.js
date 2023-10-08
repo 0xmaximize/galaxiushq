@@ -8,10 +8,13 @@ const Home = () => {
     <container>
         <Navbar />
         <div className='relative'>  
-        <video src='./fluted-glass.webm' loop autoPlay muted className='hidden  md:flex z-0 absolute'/>
+        <video src='./fluted-glass.webm' loop autoPlay muted className='hidden md:flex z-0 absolute'/>
         <Hero />
       </div>
+      <div className='relative z-10'>
         <Insight /> 
+        </div>
+
         <div className='relative z-10 labs-image'>
           <Mining />
         </div>
@@ -23,15 +26,17 @@ const Home = () => {
         <Token />
 
       <About />
-      <Brand />
+  
 
-      <Community />
       <div className='relative '>
       <Order />
       <video src='./gitness.webm' loop autoPlay muted className='md:flex z-0 '/>
 
 
       </div>
+      <Brand />
+      <Community />
+  
 
       <Footer />
 
