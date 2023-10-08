@@ -16,7 +16,7 @@ const icons = {
 const CardA = [
   {
     header : 'MINING',
-    title : 'Start mining on Galaxius',
+    title : 'Mining on Galaxius',
     description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
     icon: 'circle'
   } 
