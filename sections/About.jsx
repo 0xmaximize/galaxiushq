@@ -42,51 +42,18 @@ const CardC = [
   } 
 ]
 
-const CardD = [
-  {
-    header : 'PRODUCT',
-    title : 'Launch RTX-01 Edition',
-    description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
-    icon: 'prism'
-
-  } 
-]
-
-const CardE = [
-  {
-    header : 'BETA',
-    title : 'Galaxius BETA Launch',
-    description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
-    icon: 'prism'
-
-  } 
-]
-
-const CardF = [
-  {
-    header : 'GALAVERSE',
-    title : 'Farm with Galaxius',
-    description : 'Start a mining scales apps to meet user friendly UI & decentralized  scales apps to meet user friendly UI',
-    icon: 'prism'
-
-  } 
-]
-
 const About = () => {
   return (
     <section className={`${styles.padding}`}>
       <div className={`${styles.xPadding}`}>
         <div className="flex md:justify-center lg:justify-center items-center px-4 md:px-0">
-          <div className="text-center">
+          <div className="text-start">
             <span className='text-gray-500 font-semibold'>
-              PORTAL EXPEDITION
             </span>
-            <h1 className="font-black my-4 text-3xl md:text-5xl">
-              Explore a blockchain worlds       
+            <h1 className="font-black my-10 text-3xl md:text-5xl">
+              Enter to our ecosystem       
             </h1>
-            <p className={styles.textGray}> Try the Galaxius features to get a new experience in your blockhain </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4 mt-10 md:justify-center lg:justify-start lg:items-start">
-            
+            <div className="grid md:grid-cols-2  lg:grid-cols-3 gap-6 md:gap-4 mt-20 md:justify-center lg:justify-start lg:items-start">
               {CardA.map((data, index) => (
                 <motion.div  
                 initial="hidden"
@@ -101,7 +68,6 @@ const About = () => {
                   />
                 </motion.div >
                 ))}
-
               {CardB.map((data, index) => (
                 <motion.div  
                 initial="hidden"
@@ -116,7 +82,6 @@ const About = () => {
                   />
                 </motion.div >
               ))}
-
               {CardC.map((data, index) => (
                 <motion.div  
                 initial="hidden"
@@ -131,52 +96,6 @@ const About = () => {
                   />
                 </motion.div >
               ))}
-
-              {CardD.map((data, index) => (
-                <motion.div  
-                initial="hidden"
-                whileInView="show"
-                variants={fadeIn('up', 'tween', 0.8, 0.5)}
-                className="md:w-[340px] lg:w-[400px] justify-center items-center" key={index}>
-                  <EncryptCard 
-                  header={data.header} 
-                  title={data.title} 
-                  text={data.description} 
-                  icon={icons[data.icon]}
-                  />
-                </motion.div >
-              ))}
-
-              {CardE.map((data, index) => (
-                <motion.div  
-                initial="hidden"
-                whileInView="show"
-                variants={fadeIn('up', 'tween', 1, 0.5)}
-                className="md:w-[340px] lg:w-[400px] justify-center items-center" key={index}>
-                  <EncryptCard 
-                  header={data.header} 
-                  title={data.title} 
-                  text={data.description} 
-                  icon={icons[data.icon]}
-                  />
-                </motion.div >
-              ))}
-
-              {CardF.map((data, index) => (
-                <motion.div  
-                initial="hidden"
-                whileInView="show"
-                variants={fadeIn('up', 'tween', 1.2, 0.5)}
-                className="md:w-[340px] lg:w-[400px] justify-center items-center" key={index}>
-                  <EncryptCard 
-                  header={data.header} 
-                  title={data.title} 
-                  text={data.description} 
-                  icon={icons[data.icon]}
-                  />
-                </motion.div >
-              ))}
-
             </div>
           </div>
         </div>   

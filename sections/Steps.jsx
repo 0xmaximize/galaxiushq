@@ -9,7 +9,12 @@ import { PrismIcon } from '../components/Icon';
 const Step = () => {
   return(
     <section className={`${styles.padding} md:px-2`}>
-      <div className='flex justify-center mx-4 md:px-10 '>
+      <div className=' text-center z-10 my-10'> 
+          <h1 className="font-black text-white my-4 text-3xl md:text-5xl">
+            Explore a blockchain worlds       
+          </h1>
+        </div>
+      <div className='flex justify-center mx-4 md:px-10 mt-20'>
         <div className="grid md:grid-rows-4 md:last:grid-flow-col gap-6 ">
           <motion.div 
           whileHover={{scale:1.02}}
@@ -17,7 +22,7 @@ const Step = () => {
           whileInView="show"
           variants={fadeIn('up', 'tween', 0.2, 0.5)}
           className={
-            `${styles.hovered} md:row-span-4 lg:w-[400px] bg-white/5 backdrop-blur-xl hover:bg-white/10 `
+            `${styles.hovered} md:row-span-4 lg:w-[400px] bg-black/5 backdrop-blur-xl hover:bg-white/5`
             }
           >
             <span className='font-semibold  group-hover:text-white'>
@@ -36,7 +41,7 @@ const Step = () => {
           whileInView="show"
           variants={fadeIn('up', 'tween', 0.4, 0.5)}
           className={
-            `${styles.hovered} group md:row-span-2 md:col-span-2 bg-white/5 backdrop-blur-xl hover:bg-white/10  lg:w-[600px] `
+            `${styles.hovered} group md:row-span-2 md:col-span-2 bg-black/5 backdrop-blur-xl hover:bg-white/5  lg:w-[600px] `
             }
           >
             <div className='flex justify-between'>

@@ -13,14 +13,14 @@ const EncryptCard = ({ text, header, title, icon }) => {
       }}
 
       className="group relative justify-center items-center max-w-[400px] 
-      flex-nowrap overflow-hidden rounded-xl border-[2px] border-white/5 hover:border-emerald-500 hover:text-emerald-500 
-      bg-[#19191c] hover:bg-[#29292e]  px-4 py-2 font-mono font-medium text-gray-400 transition-colors"
+      flex-nowrap overflow-hidden rounded-xl border-[2px] border-white/20 hover:border-emerald-400 hover:text-emerald-300 
+      bg-black hover:bg-white/10 px-4 py-2 font-mono font-medium text-gray-400 transition-colors"
     >
       <div className="relative z-10 mx-4 grid text-start items-center gap-4 py-8">
          <div className="flex justify-between">
          <h1 className="font-bold">{header}</h1>
 
-          <MdOutlineArrowOutward size={20}/>
+        
          </div>
           <p className="text-2xl mt-10 font-bold">{title}</p>
           <span className="font-normal">{text}</span>

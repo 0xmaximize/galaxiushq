@@ -25,7 +25,14 @@ height: auto;
 }
 
 .labs-image {
-background-image: url("../public/labs.png");
+background-image: url("../public/labs.jpg");
+background-size: cover;
+width: full;
+height: auto;
+}
+
+.production {
+background-image: url("../public/production.jpg");
 background-size: cover;
 width: full;
 height: auto;

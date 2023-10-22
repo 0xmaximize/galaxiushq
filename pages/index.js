@@ -1,38 +1,63 @@
 'use client';
 import { Navbar, Footer } from '../components'
 import { Hero, Insight,  Mining, About, Brand, Step, Token, Community, Order} from '../sections';
-import { Divider } from '@nextui-org/react';
-
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/motion';
 const Home = () => {
     return (
     <container>
-   
-      <div className='relative'>  
-        <Navbar />
-        <video src='./fluted-glass.webm' loop autoPlay muted className='hidden md:flex z-0 absolute'/>
-        <Hero />
-      </div>
-      <div className='relative z-10'>
-        <Insight /> 
-      </div>
-      <div className='relative z-10 labs-image'>
-        <Mining />
-      </div>
-   
-      <div className='relative'>
-      <Step /> 
-      <video src='./fluted-glass.webm' loop autoPlay muted className='hidden md:flex z-0 absolute'/>
+     
+        <motion.div   
+        initial="hidden"
+        whileInView="show"
+        variants={fadeIn('up', 'tween', 0.3, 0.5)}
+        className='relative production'
+        >
+           <Navbar />
+          <Hero />
+        </motion.div>
 
+      <Insight /> 
+      <video src='./gitness.webm' loop autoPlay muted className='hidden md:flex z-0 absolute'/>
+
+      <div className='relative'>
+        <Step />
       </div>
-      <div className='relative z-10'>
-      <Token />   
-      </div>
+
       <About />
-      <div className='relative '>
+      <motion.div 
+      initial="hidden"
+      whileInView="show"
+      variants={fadeIn('up', 'tween', 0.3, 0.5)}
+      >
+        <Token />
+      </motion.div>
+
+      <motion.div 
+      initial="hidden"
+      whileInView="show"
+      variants={fadeIn('up', 'tween', 0.3, 0.5)}
+      className='relative labs-image z-0'
+      >
+        <Mining />
+      </motion.div>
+
+      <motion.div 
+      initial="hidden"
+      whileInView="show"
+      variants={fadeIn('up', 'tween', 0.3, 0.5)}
+      >
+       <Brand />
+      </motion.div>
+
+      <motion.div 
+      initial="hidden"
+      whileInView="show"
+      variants={fadeIn('up', 'tween', 0.3, 0.5)}
+      >
         <Order />
-        <video src='./gitness.webm' loop autoPlay muted className='md:flex z-0 '/>
-      </div>
-      <Brand />
+      </motion.div>
+
       <Community />
       <Footer />
     </container>
